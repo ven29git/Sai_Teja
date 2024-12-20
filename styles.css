@@ -1,0 +1,54 @@
+
+.status-tag {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 0.9rem;
+}
+.status-new { background-color: blue; }
+.status-contacted { background-color: green; }
+.status-not-interested{ background-color:red; }
+.nav-link { cursor: pointer; }
+#leadManagementContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lead-status-column {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.lead-status-column h4 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.list-group-item {
+    margin-bottom: 10px;
+}
+
+.status-tag {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 0.9rem;
+}
+
+
+#dashboard .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+#leadStatusChart {
+    max-width: 90%;
+}
+
+
+

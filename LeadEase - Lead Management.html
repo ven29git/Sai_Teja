@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadEase - Lead Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-4">
+        <ul class="nav nav-tabs mb-4" id="leadTabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-screen="leadListing">Lead Listing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-screen="leadDetails">Lead Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-screen="leadManagement">Lead Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-screen="dashboard">Dashboard</a>
+            </li>
+        </ul>
+
+<div id="leadListing" class="screen">
+    <div class="card">
+        <div class="card-header">
+            <h5>Leads</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact Info</th>
+                        <th>Source</th>
+                        <th>Status</th>
+                        <th>Assigned To</th>
+                        <th>Last Contacted</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>SMS Campaigns</td>
+                        <td><span class="status-tag status-new">New</span></td>
+                        <td>Jane Smith</td>
+                        <td>2023-12-18</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mary Jane</td>
+                        <td>mary.jane@example.com</td>
+                        <td>Facebook</td>
+                        <td><span class="status-tag status-contacted">Contacted</span></td>
+                        <td>John Brown</td>
+                        <td>2023-12-17</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Michael Scott</td>
+                        <td>michael.scott@example.com</td>
+                        <td>Phone Calls</td>
+                        <td><span class="status-tag status-new">New</span></td>
+                        <td>Angela Martin</td>
+                        <td>2023-12-19</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jim Halpert</td>
+                        <td>jim.halpert@example.com</td>
+                        <td>Website</td>
+                        <td><span class="status-tag status-contacted">Contacted</span></td>
+                        <td>Pam Beesly</td>
+                        <td>2023-12-16</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dwight Schrute</td>
+                        <td>dwight.schrute@example.com</td>
+                        <td>Referral</td>
+                        <td><span class="status-tag status-not-interested">Not Interested</span></td>
+                        <td>Michael Scott</td>
+                        <td>2023-12-15</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ryan Howard</td>
+                        <td>ryan.howard@example.com</td>
+                        <td>Google Ads</td>
+                        <td><span class="status-tag status-new">New</span></td>
+                        <td>Jan Levinson</td>
+                        <td>2023-12-14</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">View</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+        <div id="leadDetails" class="screen d-none">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Lead Details</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Contact Info:</strong> john.doe@example.com</p>
+                    <p><strong>Source:</strong> Website</p>
+                    <p><strong>Status:</strong> <span class="status-tag status-new">New</span></p>
+                    <p><strong>Assigned To:</strong> Jane Smith</p>
+                    <p><strong>Notes:</strong> Customer showed interest in SUVs.</p>
+                </div>
+            </div>
+        </div>
+
+<div id="leadManagement" class="screen d-none">
+    <div class="card">
+        <div class="card-header">
+            <h5>Lead Management</h5>
+        </div>
+        <div class="card-body">
+            <div id="leadManagementContainer">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="dashboard" class="screen d-none">
+    <div class="card">
+        <div class="card-header">
+            <h5>Dashboard</h5>
+        </div>
+        <div class="card-body">
+            <div>
+                <h4>Lead Status Distribution</h4>
+                <canvas id="leadStatusChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
